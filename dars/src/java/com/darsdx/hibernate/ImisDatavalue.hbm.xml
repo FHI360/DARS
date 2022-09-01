@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.ImisDatavalue" table="IMISDATAVALUE">
+      <id name="recordId" column="RECORDID" type="string"/>
+      <property name="dhisDataElementId" column="DHISDATAELEMENTID" type="string"/>
+      <property name="dhisFacilityId" column="DHISFACILITYID" type="string"/>
+      <property name="imisDataElementId" column="IMISDATAELEMENTID" type="string"/>
+      <property name="imisFacilityId" column="IMISFACILITYID" type="string"/>
+      <property name="f_uk" column="F_UK" type="int"/>
+      <property name="f_1" column="F_1" type="int"/>
+      <property name="f_4" column="F_4" type="int"/>
+      <property name="f_9" column="F_9" type="int"/>
+      <property name="f_14" column="F_14" type="int"/>
+      <property name="f_19" column="F_19" type="int"/>
+      <property name="f_24" column="F_24" type="int"/>
+      <property name="f_29" column="F_29" type="int"/>
+      <property name="f_34" column="F_34" type="int"/>
+      <property name="f_39" column="F_39" type="int"/>
+      <property name="f_44" column="F_44" type="int"/>
+      <property name="f_49" column="F_49" type="int"/>
+      <property name="f_50" column="F_50" type="int"/>
+      <property name="f_total" column="F_TOTAL" type="int"/>
+      
+      <property name="m_uk" column="M_UK" type="int"/>
+      <property name="m_1" column="M_1" type="int"/>
+      <property name="m_4" column="M_4" type="int"/>
+      <property name="m_9" column="M_9" type="int"/>
+      <property name="m_14" column="M_14" type="int"/>
+      <property name="m_19" column="M_19" type="int"/>
+      <property name="m_24" column="M_24" type="int"/>
+      <property name="m_29" column="M_29" type="int"/>
+      <property name="m_34" column="M_34" type="int"/>
+      <property name="m_39" column="M_39" type="int"/>
+      <property name="m_44" column="M_44" type="int"/>
+      <property name="m_49" column="M_49" type="int"/>
+      <property name="m_50" column="M_50" type="int"/>
+      <property name="m_total" column="M_TOTAL" type="int"/>
+      
+      <property name="gtotal" column="GTOTAL" type="int"/>
+      <property name="yearMonth" column="YEARMONTH" type="string"/>
+  </class>
+</hibernate-mapping>

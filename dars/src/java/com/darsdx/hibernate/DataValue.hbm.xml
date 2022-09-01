@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.DataValue" table="DATAVALUE">
+    <id name="recordId" column="RECORDID" type="integer" >
+        <generator class="identity" />
+    </id>
+    <property name="categoryOptionComboId" column="CATEGORYOPTIONCOMBO" type="string" />
+    <property name="dataElementId" column="DATAELEMENTID" type="string" />
+    <property name="datasetId" column="DATASETID" type="string" />
+    <property name="dhisId" column="DHISID" type="string" />
+    <property name="dvalue" column="DVALUE" type="string" />
+    <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="date"/>
+    <property name="lastUpdated" column="LASTUPDATED" type="string"/>
+    <property name="period" column="PERIOD" type="string"/>
+    <property name="orgUnitId" column="ORGUNITID" type="string" />
+    <property name="startDate" column="STARTDATE" type="date" />
+    <property name="attributeOptionCombo" column="ATTRIBUTEOPTIONCOMBO" type="string" />
+    <property name="categoryOptionComboName" column="CATEGORYOPTIONCOMBONAME" type="string" />
+    <property name="dataElementName" column="DATAELEMENTNAME" type="string" />
+    <property name="orgUnitName" column="ORGUNITNAME" type="string" />
+    <property name="uploadedToDhis2" column="UPLOADEDTODHIS2" type="int" />
+  </class>
+</hibernate-mapping>

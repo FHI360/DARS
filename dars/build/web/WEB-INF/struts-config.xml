@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="OrganizationUnitDataImportForm" type="com.darsdx.controller.OrganizationUnitDataImportForm"/>
+        <form-bean name="OrganizationUnitExportForm" type="com.darsdx.controller.OrganizationUnitExportForm"/>
+        <form-bean name="TaskExecutionForm" type="com.darsdx.controller.TaskExecutionForm"/>
+        <form-bean name="TaskManagerForm" type="com.darsdx.controller.TaskManagerForm"/>
+        <form-bean name="DatabaseConnectionForm" type="com.darsdx.controller.DatabaseConnectionForm"/>
+        <form-bean name="DatavalueDownloadForm" type="com.darsdx.controller.DatavalueDownloadForm"/>
+        <form-bean name="MetadataForm" type="com.darsdx.controller.MetadataForm"/>
+        <form-bean name="UserForm" type="com.darsdx.controller.UserForm"/>
+        <form-bean name="LoginForm" type="com.darsdx.controller.LoginForm"/>
+        <form-bean name="OrganizationUnitMatchReportForm" type="com.darsdx.report.controller.OrganizationUnitMatchReportForm"/>
+        <form-bean name="OrganizationUnitMatchReport" type="com.darsdx.report.controller.OrganizationUnitMatchReport"/>
+        <form-bean name="OrganisationUnitMachUploadForm" type="com.darsdx.controller.OrganisationUnitMachUploadForm"/>
+        <form-bean name="BusinessRuleUploadForm" type="com.darsdx.controller.BusinessRuleUploadForm"/>
+        <form-bean name="CategoryOptionComboEditForm" type="com.darsdx.controller.CategoryOptionComboEditForm"/>
+        <form-bean name="OrgUnitMatchEditForm" type="com.darsdx.controller.OrgUnitMatchEditForm"/>
+        <form-bean name="DhisDataUploadForm" type="com.darsdx.controller.DhisDataUploadForm"/>
+        <form-bean name="DataProcessorForm" type="com.darsdx.controller.DataProcessorForm"/>
+        <form-bean name="DataTransformationForm" type="com.darsdx.controller.DataTransformationForm"/>
+        <form-bean name="ReportDownloadForm" type="com.darsdx.report.controller.ReportDownloadForm"/>
+        <form-bean name="DataUploadForm" type="com.darsdx.controller.DataUploadForm"/>
+        <form-bean name="BusinessRuleReportForm" type="com.darsdx.report.controller.BusinessRuleReportForm"/>
+        <form-bean name="HomeForm" type="com.darsdx.controller.HomeForm"/>
+        <form-bean name="OrganizationUnitMatchForm" type="com.darsdx.controller.OrganizationUnitMatchForm"/>
+        <form-bean name="DhisInstanceForm" type="com.darsdx.controller.DhisInstanceForm"/>
+        <form-bean name="DataExchangeOrganizationUnitForm" type="com.darsdx.controller.DataExchangeOrganizationUnitForm"/>
+        <form-bean name="DataElementAndCategoryMatchForm" type="com.darsdx.controller.DataElementAndCategoryMatchForm"/>
+    
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/HomePage.jsp" name="HomeForm" path="/homeAction" scope="session" type="com.darsdx.controller.HomeAction">
+            <forward name="homePage" path="/HomePage.jsp"/>
+            <forward name="metadataMgtPage" path="/DataExchange/MetadataMgt.jsp"/>
+        </action>
+        <action input="/DataExchange/OrgUnitMatchInstanceSelectionPage.jsp" name="OrganizationUnitMatchForm" path="/orgunitmatch" scope="session" type="com.darsdx.controller.OrganizationUnitMatchAction">
+            <forward name="oumparampage" path="/DataExchange/OrgUnitMatchInstanceSelectionPage.jsp"/>
+            <forward name="oumatchpage" path="/DataExchange/OrgUnitMatchPage.jsp"/>
+        </action>
+        <action input="/DataExchange/DhisInstance.jsp" name="DhisInstanceForm" path="/dhisinstance" scope="session" type="com.darsdx.controller.DhisInstanceAction">
+            <forward name="paramPage" path="/DataExchange/DhisInstance.jsp"/>
+        </action>
+        <action input="/DataExchange/DataExchangeOrganizationUnitUpload.jsp" name="DataExchangeOrganizationUnitForm" path="/dxorgunit" scope="session" type="com.darsdx.controller.DataExchangeOrganizationUnitAction">
+           <forward name="success" path="/DataExchange/DataExchangeOrganizationUnitUpload.jsp"/> 
+        </action>
+        <action input="/DataExchange/BusinessRulesInstanceSelectionPage.jsp" name="DataElementAndCategoryMatchForm" path="/businesrule" scope="session" type="com.darsdx.controller.DataElementAndCategoryMatchAction">
+            <forward name="paramPage" path="/DataExchange/BusinessRulesInstanceSelectionPage.jsp"/> 
+            <forward name="busRulePage" path="/DataExchange/BusinessRulesPage.jsp"/> 
+        </action>
+        <action input="/Reports/BusinessRuleReportParamPage.jsp" name="BusinessRuleReportForm" path="/businessrulereport" scope="session" type="com.darsdx.report.controller.BusinessRuleReportAction">
+            <forward name="paramPage" path="/Reports/BusinessRuleReportParamPage.jsp"/>
+            <forward name="bizrulemgt" path="/Reports/BusinessRulesMgt.jsp"/>
+        </action>
+        <action input="/DataExchange/SourceDataUpload.jsp" name="DataUploadForm" path="/dataupload" scope="session" type="com.darsdx.controller.DataUploadAction">
+            <forward name="dataUploadPage" path="/DataExchange/SourceDataUpload.jsp"/>
+        </action>
+        
+        <action input="/Reports/ReportDownload.jsp" name="ReportDownloadForm" path="/reportdownload" scope="session" type="com.darsdx.report.controller.ReportDownloadAction">
+            <forward name="paramPage" path="/Reports/ReportDownload.jsp"/>
+        </action>
+        <action input="/DataExchange/DataTransformation.jsp" name="DataTransformationForm" path="/datatransformation" scope="session" type="com.darsdx.controller.DataTransformationAction">
+            <forward name="dataTransformationPage" path="/DataExchange/DataTransformation.jsp"/>
+        </action>
+        <action input="/DataExchange/DataProcessingHomePage.jsp" name="DataProcessorForm" path="/dataprocessor" scope="session" type="com.darsdx.controller.DataProcessorAction">
+            <forward name="dataProcessorHomePage" path="/DataExchange/DataProcessingHomePage.jsp"/>
+            
+        </action>
+        <action input="/DataExchange/DhisDataUpload.jsp" name="DhisDataUploadForm" path="/dhisdataupload" scope="session" type="com.darsdx.controller.DhisDataUploadAction">
+            <forward name="paramPage" path="/DataExchange/DhisDataUpload.jsp"/>
+        </action>
+        <action input="/" name="OrgUnitMatchEditForm" path="/orgunitmatchedit" scope="session" type="com.darsdx.controller.OrgUnitMatchEditAction">
+           <forward name="success" path="/DataExchange/OrgUnitMatchEdit.jsp"/> 
+        </action>
+        <action input="/DataExchange/CategoryOptionComboEdit.jsp" name="CategoryOptionComboEditForm" path="/catcomboedit" scope="session" type="com.darsdx.controller.CategoryOptionComboEditAction">
+            <forward name="success" path="/DataExchange/CategoryOptionComboEdit.jsp"/> 
+        </action>
+        <action input="/" name="BusinessRuleUploadForm" path="/businessruleupload" scope="session" type="com.darsdx.controller.BusinessRuleUploadAction">
+            <forward name="uploadpage" path="/DataExchange/BusinessRuleExcelUpload.jsp"/> 
+        </action>
+        <action input="/" name="OrganisationUnitMachUploadForm" path="/orgunitmatchupload" scope="session" type="com.darsdx.controller.OrganisationUnitMachUploadAction">
+            <forward name="uploadpage" path="/DataExchange/OrganizationUnitMatchExcelUpload.jsp"/> 
+        </action>
+        <action input="/" name="OrganizationUnitMatchReportForm" path="/oumatchreport" scope="session" type="com.darsdx.report.controller.OrganizationUnitMatchReportAction">
+            <forward name="paramPage" path="/Reports/OrgUnitMatchReport.jsp"/> 
+        </action>
+        <action input="/" name="UserForm" path="/user" scope="session" type="com.darsdx.controller.UserAction"/>
+        <action input="/" name="LoginForm" path="/login" scope="session" type="com.darsdx.controller.LoginAction">
+            <forward name="loginPage" path="/login.jsp"/>
+            <forward name="success" path="/HomePage.jsp"/> 
+        </action>
+        <action input="/DataExchange/MetadataMgt.jsp" name="MetadataForm" path="/metadataaction" scope="session" type="com.darsdx.controller.MetadataAction">
+            <forward name="success" path="/DataExchange/MetadataMgt.jsp"/>
+        </action>
+        <action input="/DataExchange/DataValueDownload.jsp" name="DatavalueDownloadForm" path="/datavaluedownload" scope="session" type="com.darsdx.controller.DatavalueDownloadAction">
+            <forward name="paramPage" path="/DataExchange/DataValueDownload.jsp"/>
+        </action>
+        <action input="/DataExchange/DatabaseConnection.jsp" name="DatabaseConnectionForm" path="/dbconnection" scope="session" type="com.darsdx.controller.DatabaseConnectionAction">
+            <forward name="success" path="/DataExchange/DatabaseConnection.jsp"/>
+        </action>
+        <action input="/DataExchange/TaskManager.jsp" name="TaskManagerForm" path="/taskmanager" scope="session" type="com.darsdx.controller.TaskManagerAction">
+                <forward name="success" path="/DataExchange/TaskManager.jsp"/>
+            </action>
+        <action input="/DataExchange/TaskExecutionForm.jsp" name="TaskExecutionForm" path="/taskexecution" scope="session" type="com.darsdx.controller.TaskExecutionAction">
+            <forward name="success" path="/DataExchange/TaskExecutionForm.jsp"/>
+        </action>
+        <action input="/DataExchange/OrganizationUnitExportParamPage.jsp" name="OrganizationUnitExportForm" path="/ouexport" scope="session" type="com.darsdx.controller.OrganizationUnitExportAction">
+            <forward name="success" path="/DataExchange/OrganizationUnitExportParamPage.jsp"/>
+        </action>
+        <action input="/DataExchange/OrganizationUnitExcelUpload.jsp" name="OrganizationUnitDataImportForm" path="/oudataimport" scope="session" type="com.darsdx.controller.OrganizationUnitDataImportAction">
+            <forward name="success" path="/DataExchange/OrganizationUnitExcelUpload.jsp"/>
+        </action>
+        <action path="/ajaxaction" type="com.darsdx.controller.StrutsAjaxAction"/>
+        <action path="/Welcome" forward="/login.do"/>
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

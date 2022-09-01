@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.SourceData" table="SOURCEDATA">
+    <id column="RECORDID" name="recordId" type="int">
+      <generator class="identity"/>
+    </id>
+    <property name="categoryOptionComboName" column="CATEGORYCOMBO" type="string" />
+    <property name="dataElementName" column="DATAELEMENT" type="string" />
+    <property name="dataset" column="DATASET" type="string" />
+    <property name="dhisInstance" column="DHISINSTANCE" type="string" />
+    <property name="fundingBody" column="FUNDINGBODY" type="string" />
+    <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="string" />
+    <property name="organizationUnit" column="ORGANIZATIONUNIT" type="string" />
+    <property name="organizationUnitGroup" column="ORGUNITGROUP" type="string" />
+    <property name="organizationUnitOwnership" column="ORGANIZATIONUNITOWNERSHIP" type="string" />
+    <property name="organizationUnitType" column="ORGUNITTYPE" type="string" />
+    <property name="startDate" column="STARTDATE" type="string" />
+    <property name="value" column="DATAVALUE" type="int" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.DxOrganizationUnit" table="DxORGANIZATIONUNIT">
+    <id column="RECORDID" name="recordId" type="int">
+      <generator class="identity"/>
+    </id>
+    <property column="ORGUNITID" name="orgunitId" type="string"/>
+    <property column="INSTANCENAME" name="instanceName" type="string"/>
+    <property column="LASTMODIFIEDDATE" name="lastModifiedDate" type="string"/>
+    <property column="OULEVEL" name="level" type="int"/>
+    <property column="ORGUNITNAME" name="orgunitName" type="string"/>
+    <property column="PARENTID" name="parentId" type="string"/>
+    <property column="OUCODE" name="ouCode" type="string"/>
+  </class>
+</hibernate-mapping>

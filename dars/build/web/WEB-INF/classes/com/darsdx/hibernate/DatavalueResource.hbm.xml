@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.DatavalueResource" table="DATAVALUERESOURCE">
+      <id name="dhisId" column="DHISID" type="string"/>
+      <property name="url" column="URL" type="string"/>
+      <property name="dateCreated" column="DATECREATED" type="date"/>
+      <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="date"/>
+      <property name="startMonth" column="STARTMONTH" type="int"/>
+      <property name="startYear" column="STARTYEAR" type="int"/>
+      <property name="endMonth" column="ENDMONTH" type="int"/>
+      <property name="endYear" column="ENDYEAR" type="int"/>
+  </class>
+</hibernate-mapping>

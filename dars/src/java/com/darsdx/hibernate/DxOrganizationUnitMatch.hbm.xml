@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.DxOrganizationUnitMatch" table="DxORGANIZATIONUNITMATCH">
+    <id column="RECORDID" name="recordId" type="int">
+      <generator class="identity"/>
+    </id>
+        <property name="consumerInstanceId" column="CONSUMERINSTANCEID" type="string" />
+        <property name="producerInstanceId" column="PRODUCERINSTANCEID" type="string" />
+        <property name="producerOrgUnitId" column="PRODUCERORGUNITID" type="string" />
+        <property name="consumerOrgUnitId" column="CONSUMERORGUNITID" type="string" />
+        <property name="producerOrgUnitName" column="PRODUCERORGUNITNAME" type="string" />
+        <property name="consumerOrgUnitName" column="CONSUMERORGUNITNAME" type="string" />
+        <property name="producerouvalidated" column="PRODUCEROUVALIDATED" type="int" />
+        <property name="consumerouvalidated" column="CONSUMEROUVALIDATED" type="int" />
+        <property name="totalValidationScore" column="TOTALVALIDATIONSCORE" type="int" />
+        <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="string" />
+        <property name="matchDescription" column="MATCHDESCRIPTION" type="string" />
+  </class>
+</hibernate-mapping>

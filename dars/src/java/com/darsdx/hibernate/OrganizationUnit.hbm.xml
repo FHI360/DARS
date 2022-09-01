@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.OrganizationUnit" table="DXORGANIZATIONUNIT">
+      <id name="orgunitId" column="ORGUNITID" />
+      <property name="dhisId" column="INSTANCENAME" type="string"/>
+    <property name="orgunitName" column="ORGUNITNAME" type="string"/>
+    <property name="parentId" column="PARENTID" type="string"/>
+    <property name="path" column="OUPATH" type="string"/>
+    <property name="oulevel" column="OULEVEL" type="integer"/>
+    <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="date"/>
+    <property name="ouCode" column="OUCODE" type="string"/>
+    <property name="shortName" column="SHORTNAME" type="string"/>
+  </class>
+</hibernate-mapping>

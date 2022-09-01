@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby:C:\Darsdx\dars2\darsdb</property>
+    <property name="connection.pool_size">20</property>
+    <property name="c3p0.acquire_increment">2</property>
+    <property name="c3p0.idle_test_period">100</property>
+    <!-- seconds -->
+    <property name="c3p0.max_size">100</property>
+    <property name="c3p0.max_statements">0</property>
+    <property name="c3p0.min_size">10</property>
+    <property name="c3p0.timeout">100</property>
+    <!--<mapping resource="com/darsdx/hibernate/DhisInstance.hbm.xml"/>-->
+    <mapping resource="com/darsdx/hibernate/DxOrganizationUnit.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DxDataElement.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DxCategoryCombination.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DxOrganizationUnitMatch.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/BusinessRule.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/SourceData.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/IntermediateFlatTable.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/FinalFlatTable.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/User.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DhisInstanceSetup.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/OrganizationUnit.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DataElement.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DataValue.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/CleanedDatavalue.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/CategoryOptionCombo.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DataSet.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/OrganisationUnitGroup.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DatavalueResource.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DatabaseConnection.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/DataTransfer.hbm.xml"/>
+    <mapping resource="com/darsdx/hibernate/ImisDatavalue.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

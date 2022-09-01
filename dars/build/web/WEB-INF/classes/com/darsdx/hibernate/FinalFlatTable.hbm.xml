@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.FinalFlatTable" table="FINALFLATTABLE">
+      <id column="RECORDID" name="recordId" type="int">
+        <generator class="identity"/>
+    </id>
+    <property column="CONSUMERCATEGORYID" name="consumerCategoryId" type="string"/>
+    <property column="CONSUMERCATEGORYNAME" name="consumerCategoryName" type="string"/>
+    <property column="CONSUMERDATAELEMENTID" name="consumerDataElementId" type="string"/>
+    <property column="CONSUMERDATAELEMENTNAME" name="consumerDataElementName" type="string"/>
+    <property column="CONSUMERINSTANCE" name="consumerInstance" type="string"/>
+    <property column="PRODUCERINSTANCE" name="producerInstance" type="string"/>
+    <property column="CONSUMERORGANIZATIONUNITID" name="consumerOrganizationUnitId" type="string"/>
+    <property column="CONSUMERORGANIZATIONUNITNAME" name="consumerOrganizationUnitName" type="string"/>
+    <property column="DATAVALUE" name="value" type="int"/>
+    <property column="LASTMODIFIEDDATE" name="lastModifiedDate" type="string"/>
+    <property column="STARTDATE" name="startDate" type="string"/>
+    <property column="ATTRIBUTEOPTIONCOMBO" name="attributeOptionCombo" type="string"/>
+  </class>
+</hibernate-mapping>

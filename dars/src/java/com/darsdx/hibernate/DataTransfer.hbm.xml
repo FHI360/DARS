@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.DataTransferManager" table="DATATRANSFER">
+      <id name="uid" column="ID" type="string"/>
+      <property name="dataElementMapping" column="DECATMAPPING" type="string"/>
+      <property name="dataSink" column="DATASINK" type="string"/>
+      <property name="dataSource" column="DATASOURCE" type="string"/>
+      <property name="dateCreated" column="DATECREATED" type="date"/>
+      <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="date"/>
+      <property name="name" column="TASKNAME" type="string"/>
+      <property name="orgUnitMapping" column="ORGUNITMAPPING" type="string"/>
+      <property name="frequency" column="EXECFREQUENCY" type="string"/>
+      <property name="startDate" column="STARTDATE" type="date"/>
+      <property name="endDate" column="ENDDATE" type="date"/>
+  </class>
+</hibernate-mapping>

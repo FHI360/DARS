@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.OrganisationUnitGroup" table="ORGANIZATIONUNITGROUP">
+      <id name="orgunitGroupId" column="ORGUNITGROUPID" type="string"/>
+      <property name="orgunitGroupName" column="ORGUNITGROUPNAME" type="string"/>
+      <property name="dhisId" column="DHISID" type="string"/>
+      <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="date"/>
+  </class>
+</hibernate-mapping>

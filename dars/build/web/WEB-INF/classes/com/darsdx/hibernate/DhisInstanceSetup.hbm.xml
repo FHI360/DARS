@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.darsdx.business.DhisInstance" table="DHISSETUP">
+      <id name="dhisId" column="DHISID" type="string" />
+      <property name="dateCreated" column="DATECREATED" type="date" />
+      <property name="apiUrl" column="APIURL" type="string"/>
+      <property name="dhisName" column="DHISNAME" type="string"/>
+      <property name="dhisHomeUrl" column="DHISHOMEURL" type="string"/>
+      <property name="password" column="PASSWORD" type="string" />
+      <property name="lastModifiedDate" column="LASTMODIFIEDDATE" type="date" />
+      <property name="recordedBy" column="RECORDEDBY" type="string" />
+      <property name="userName" column="USERNAME" type="string" />
+      <property name="connectionType" column="CONNECTIONTYPE" type="string"/>
+  </class>
+</hibernate-mapping>
